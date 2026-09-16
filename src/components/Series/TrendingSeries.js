@@ -5,7 +5,7 @@ import Wrapper from '../Layout/Wrapper';
 const TrendingSeries = () => {
     const [data, setData] = useState([])
    
-    const baseapi = `https://api.themoviedb.org/3/tv/on_the_air?api_key=5b43d1ebe66750ccefbad667bde21805&language=en-US&page=1`
+    const baseapi = `https://api.themoviedb.org/3/tv/on_the_air?api_key=5b43d1ebe66750ccefbad667bde21805&language=en-US`
     
    
     useEffect(() => {
@@ -14,7 +14,10 @@ const TrendingSeries = () => {
                return res.json()
             })
             .then(data => {
-                setData(data.results)
+              setData(Array.isArray(data.results) ? data.results : [])
+            })
+            .catch(() => {
+              setData([])
             })
            
     },[baseapi])

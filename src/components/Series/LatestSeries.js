@@ -8,12 +8,15 @@ const LatestSeries = () => {
     const baseapi = `https://api.themoviedb.org/3/tv/airing_today?api_key=5b43d1ebe66750ccefbad667bde21805&language=en-US&page=1`
    
     useEffect(() => {
-            fetch(`${baseapi}&page=${1}`)
+            fetch(`${baseapi}`)
             .then(res => {
                return res.json()
             })
             .then(data => {
-                setData(data.results)
+                setData(Array.isArray(data.results) ? data.results : [])
+            })
+            .catch(() => {
+                setData([])
             })
            
     },[baseapi])
