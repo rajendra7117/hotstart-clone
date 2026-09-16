@@ -13,7 +13,7 @@ const Latest = () => {
           .then((data) => {
             setData(data.results);
           });
-      }, []);
+      }, [baseapi]);
   return (
     <Wrapper>
         <h4>{`Latest & Trending Movies`}</h4>

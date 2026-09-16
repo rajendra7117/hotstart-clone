@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="nav-list">
-        <img src={logo} onClick={goToHome} />
+        <img src={logo} onClick={goToHome} alt="Hotstar logo" />
         <MenuIcon className="menu" onClick={toggleList} />
         <div className={`list ${showList ? "show" : ""}`}>
           <NavLink to="/movies" onClick={toggleList}>Movies </NavLink>

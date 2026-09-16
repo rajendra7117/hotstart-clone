@@ -48,7 +48,7 @@ const MovieDetails = (props) => {
     if(props.banner===true){
      setOverview(movie_overview.slice(0, spaceIndex[20]))
     }
-  }, [props.banner, props.series])
+  }, [props.banner, props.series, props.movie])
 
 
   return (

@@ -16,7 +16,7 @@ const Trending = () => {
                 setData(data.results)
             })
            
-    },[])
+    },[baseapi])
 
  
     

@@ -64,7 +64,7 @@ const Login = () => {
       clearInterval(timer)
     }
   
-  }, [authState, enteredEmail, enteredPassword])
+  }, [authState, enteredEmail, enteredPassword, dispatch])
 
   const submitHandler = (e) => {
     e.preventDefault();

@@ -13,7 +13,7 @@ const TopRated = () => {
           .then((data) => {
             setData(data.results);
           });
-      }, []);
+      }, [baseapi]);
   return (
     <Wrapper>
         <h4>{`Top Rated Movies`}</h4>
