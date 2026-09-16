@@ -6,8 +6,7 @@ import MovieDetails from '../Layout/MovieDetails';
 
 
 const ImageSlider = (props) => {
-  
-  const data={banner: true, series: false}
+
     var settings = {
         dots: false,
         infinite: true,
@@ -24,7 +23,7 @@ const ImageSlider = (props) => {
     for(let i=0;i<=5;i++){
       movieArray.push(props.movies[Math.floor(Math.random() * 20)])
     }
-  let content = movieArray.map(movie => <div key={movie.id} className="banner-movie"> <MovieDetails banner={true} movie={movie} series={false}/> <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}/> </div>)
+  let content = movieArray.map(movie => <div key={movie.id} className="banner-movie"> <MovieDetails banner={true} movie={movie} series={false}/> <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title || movie.name || ''}/></div>)
       return (
       
         <Slider {...settings} className={'img-slider'}>

@@ -16,7 +16,7 @@ const LatestSeries = () => {
                 setData(data.results)
             })
            
-    },[])
+    },[baseapi])
  
     
   return (

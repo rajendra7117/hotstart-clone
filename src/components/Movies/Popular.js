@@ -13,7 +13,7 @@ const Popular = () => {
           .then((data) => {
             setData(data.results);
           });
-      }, []);
+      }, [baseapi]);
   return (
     <Wrapper>
         <h4>{`Popular Movies`}</h4>

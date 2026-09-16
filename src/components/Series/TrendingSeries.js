@@ -17,7 +17,7 @@ const TrendingSeries = () => {
                 setData(data.results)
             })
            
-    },[])
+    },[baseapi])
  
     
   return (

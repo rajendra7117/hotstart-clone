@@ -15,7 +15,7 @@ const PopularSeries = () => {
                 setData(data.results)
             })
            
-    },[])
+    },[baseapi])
  
     console.log(data)
     

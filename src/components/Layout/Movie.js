@@ -12,7 +12,6 @@ const Movie = (props) => {
     const history = useHistory()
     const dispatch = useDispatch()
    
-    const info = {banner:false, movie:props.movie, series:props.series}
     const showInfo = e => {
         setShowDetails(true)
     }
@@ -41,7 +40,7 @@ const Movie = (props) => {
     onMouseLeave={hideDetails}
     onClick={viewDetail}
     >
-        <img src={image} alt={'movie/series image'}/>
+        <img src={image} alt={props.movie.original_title || props.movie.original_name || ''}/>
         {showDetails && <MovieDetails banner={false} movie={props.movie} series={props.series}/>}
         
 

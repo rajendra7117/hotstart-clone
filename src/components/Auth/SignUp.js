@@ -34,7 +34,7 @@ const SignUp = () => {
     if(authState.status==='completed'){
       dispatch(formToggleSliceActions.toggleLoginForm())
     }
-  }, [authState])
+  }, [authState, dispatch])
   const {
     input: enteredEmail,
     inputHandler: emailHandler,

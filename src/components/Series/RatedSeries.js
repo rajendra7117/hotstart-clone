@@ -15,7 +15,7 @@ const RatedSeries = () => {
                 setData(data.results)
             })
            
-    },[])
+    },[baseapi])
  
     
   return (
